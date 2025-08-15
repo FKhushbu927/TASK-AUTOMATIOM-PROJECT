@@ -28,7 +28,9 @@ public class LogInPages extends BaseTest {
     WebElement loginBtn;
 
 
-    @FindBy(xpath= "//div/p[contains(text(),'Invalid credentials')]")
+    //p[@class='oxd-text oxd-text--p oxd-alert-content-text']
+
+    @FindBy(xpath= "//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
     WebElement errorMessageEl;
 
     public LogInPages() {

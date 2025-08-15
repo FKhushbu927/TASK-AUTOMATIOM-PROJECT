@@ -30,19 +30,17 @@ public class BaseTest {
             properties = new Properties();
             FileInputStream inputStream = new FileInputStream(filePath);
             properties.load(inputStream);
-
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            inputStream.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error loading config.properties file", e);
         }
     }
     public void initialization() {
+
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
 
         e_driver = new EventFiringWebDriver(driver);
-        // Now create object of EventListerHandler to register it with EventFiringWebDriver
         eventListener = new WebEventListener();
         e_driver.register(eventListener);
         driver = e_driver;
@@ -59,10 +57,10 @@ public class BaseTest {
         return properties.getProperty("username").trim();
     }
 
-
     public String getPassword() {
         return properties.getProperty("password").trim();
     }
+
 
     public void scrollToElementAndClick(WebElement webElement) {
         webElement.isDisplayed();

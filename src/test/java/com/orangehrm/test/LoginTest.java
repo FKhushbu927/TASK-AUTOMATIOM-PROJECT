@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
     }
 
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void loginShouldFail() {
         loginPages.loginFail("khushbu", "dsrfg");
         Assert.assertTrue(loginPages.hasErrorMessage());

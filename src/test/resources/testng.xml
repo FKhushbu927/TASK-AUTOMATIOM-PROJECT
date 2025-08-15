@@ -3,15 +3,13 @@
 <suite name="All Test Suite">
     <listeners>
 
-        C:\Users\Dell\IdeaProjects\TASK-AUTOMATION\src\test\java\com\orangehrm
-        <listener class-name="com.orangehrm.extentReportListener.ExtentReporterNG"/>
+        <listener class-name="com.orangehrm.extentReportListener.ExtentReport"/>
     </listeners>
 
     <test name="ExtentReporterNG">
         <classes>
-            <class name="com.orangehrmlive.qa.test.LoginTest"></class>
-            <class name="com.orangehrmlive.qa.test.HomeTest"></class>
-            <class name="com.orangehrmlive.qa.test.AdminTest"></class>
+            <class name="com.orangehrm.test.LoginTest"></class>
+            <class name="com.orangehrm.test.ApplyLeaveTest"></class>
         </classes>
     </test>
 </suite>

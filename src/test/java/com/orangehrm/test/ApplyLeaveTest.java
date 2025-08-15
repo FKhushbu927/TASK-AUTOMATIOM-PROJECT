@@ -22,7 +22,7 @@ public class ApplyLeaveTest extends BaseTest {
         applyLeavePage = new ApplyLeavePage();
     }
 
-    @Test(priority = 0)
+    @Test(priority = 2)
     public void applyLeaveShouldVisible() {
         applyLeavePage.applyLeaveShouldVisible();
         Assert.assertTrue(applyLeavePage.hasApplyLeaveText());
