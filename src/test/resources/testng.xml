@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+
+        C:\Users\Dell\IdeaProjects\TASK-AUTOMATION\src\test\java\com\orangehrm
+        <listener class-name="com.orangehrm.extentReportListener.ExtentReporterNG"/>
+    </listeners>
+
+    <test name="ExtentReporterNG">
+        <classes>
+            <class name="com.orangehrmlive.qa.test.LoginTest"></class>
+            <class name="com.orangehrmlive.qa.test.HomeTest"></class>
+            <class name="com.orangehrmlive.qa.test.AdminTest"></class>
+        </classes>
+    </test>
+</suite>
